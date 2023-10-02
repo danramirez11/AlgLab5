@@ -11,6 +11,7 @@ module: {
     }, {
         test: /\.css$/i,
         use: ["css-loader"],
+        exclude: /node_modules/,
       },
     ],
 },

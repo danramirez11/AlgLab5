@@ -1,0 +1,10 @@
+div{
+    display: flex;
+    gap: 12px;
+}
+
+p{
+    background-color: gray;
+    padding: 12px;
+    margin: 12px;
+}
