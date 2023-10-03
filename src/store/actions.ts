@@ -1,8 +1,22 @@
 import { BackgroundActions } from '../types/store';
 
-export const change = (payload: any) => {
+export const changeUp = (payload: any) => {
 	return {
-		action: BackgroundActions.CHANGEBACKGROUNDCOLOR,
+		action: BackgroundActions.CHANGEUP,
+		payload,
+	};
+};
+
+export const changeMid = (payload: any) => {
+	return {
+		action: BackgroundActions.CHANGEMID,
+		payload,
+	};
+};
+
+export const changeDown = (payload: any) => {
+	return {
+		action: BackgroundActions.CHANGEDOWN,
 		payload,
 	};
 };

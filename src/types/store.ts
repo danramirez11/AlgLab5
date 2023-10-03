@@ -1,16 +1,30 @@
 export type Observer = { render: () => void } & HTMLElement;
 
 export type AppState = {
-	BackgroundColor: string;
+	up: string;
+	mid: string;
+	down: string;
 };
 
 export enum BackgroundActions {
-	'CHANGEBACKGROUNDCOLOR' = 'CHANGEBACKGROUNDCOLOR'
+	'CHANGEUP' = 'CHANGEUP',
+	'CHANGEMID' = 'CHANGEMID',
+	'CHANGEDOWN' = 'CHANGEDOWN'
 }
 
-export interface ChangeBackgroundAction {
-	action: BackgroundActions.CHANGEBACKGROUNDCOLOR;
+export interface ChangeUpAction {
+	action: BackgroundActions.CHANGEUP;
 	payload: "white";
 }
 
-export type Actions = ChangeBackgroundAction;
+export interface ChangeMidAction {
+	action: BackgroundActions.CHANGEMID;
+	payload: "white";
+}
+
+export interface ChangeDownAction {
+	action: BackgroundActions.CHANGEDOWN;
+	payload: "white";
+}
+
+export type Actions = ChangeUpAction | ChangeMidAction | ChangeDownAction;

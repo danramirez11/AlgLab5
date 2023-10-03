@@ -1,6 +1,6 @@
 import style from './Options.css';
 import { appState, dispatch } from '../../store/index';
-import { change } from '../../store/actions';
+import { changeUp, changeDown, changeMid } from '../../store/actions';
 
 export enum Attribute {
 	'one' = 'one',
@@ -34,11 +34,12 @@ export default class Options extends HTMLElement {
 
 	connectedCallback() {
 		this.render();
+
 		const one = this.shadowRoot?.querySelector('.one');
         one?.addEventListener('click',  () => {
 			console.log('hpta 1 clickeado mk');
 			dispatch( 
-				change(
+				changeUp(
 					this.one
 				)
 			);
@@ -49,7 +50,7 @@ export default class Options extends HTMLElement {
         two?.addEventListener('click',  () => {
 			console.log('hpta 2 clickeado mk');
 			dispatch( 
-				change(
+				changeMid(
 					this.two
 				)
 			);
@@ -60,7 +61,7 @@ export default class Options extends HTMLElement {
         three?.addEventListener('click',  () => {
 			console.log('hpta 3 clickeado mk');
 			dispatch( 
-				change(
+				changeDown(
 					this.three
 				)
 			);
@@ -76,7 +77,7 @@ export default class Options extends HTMLElement {
 	render() {
 		if (this.shadowRoot)
 			this.shadowRoot.innerHTML = `<style>${style}</style>
-		<div>
+		    <div>
 			<p class="one">${this.one}</p>
 			<p class="two">${this.two}</p>
 			<p class="three">${this.three}</p>

@@ -1,3 +1,8 @@
-*{
+div{
     display: flex;
+}
+
+my-options{
+    display: flex;
+    flex-direction: column;
 }

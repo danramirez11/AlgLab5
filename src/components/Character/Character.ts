@@ -1,6 +1,6 @@
 import style from './Character.css';
 import { dispatch } from '../../store/index';
-import { change } from '../../store/actions';
+import { changeUp, changeDown, changeMid } from '../../store/actions';
 
 export enum AttributeChar {
 	'up' = 'up',
@@ -46,6 +46,8 @@ export default class Character extends HTMLElement {
 			this.shadowRoot.innerHTML = `<style>${style}</style>
         <section>
 		<p>${this.up}</p>
+		<p>${this.mid}</p>
+		<p>${this.down}</p>
 		</section>
         `;
 	}

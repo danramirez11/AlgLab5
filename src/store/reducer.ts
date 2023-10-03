@@ -8,17 +8,25 @@ export const reducer = (currentAction: Actions, currentState: AppState): AppStat
 	const { action, payload } = currentAction;
 
 	switch (action) {
-		case BackgroundActions.CHANGEBACKGROUNDCOLOR:
-			return {
-				...currentState,
-				BackgroundColor: payload,
-				
-			};
+		case BackgroundActions.CHANGEUP:
+		  return {
+			...currentState,
+			up: payload,
+		  };
 
-			
+		  case BackgroundActions.CHANGEMID:
+		  return {
+			...currentState,
+			mid: payload,
+		  };
+
+		  case BackgroundActions.CHANGEDOWN:
+		  return {
+			...currentState,
+			down: payload,
+		  };
 		default:
-			return currentState;
-	}
-
+		  return currentState;
+	  }
 
 };

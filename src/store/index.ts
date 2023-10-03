@@ -2,7 +2,9 @@ import { AppState, Observer } from '../types/store';
 import { reducer } from './reducer';
 
 export let appState: AppState = {
-	BackgroundColor: 'mierda',
+	up: 'mierda',
+	mid: 'gonorrea',
+	down: 'puto'
 };
 
 console.log(appState);
