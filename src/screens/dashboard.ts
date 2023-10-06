@@ -20,21 +20,22 @@ class Dashboard extends HTMLElement {
 		if (this.shadowRoot) this.shadowRoot.innerHTML = `<style>${styles}</style>`;
 
 		const options = this.ownerDocument.createElement("my-options") as Options;
-		options.setAttribute(Attribute.one, "puta");
-		options.setAttribute(Attribute.two, "jueputa");
-		options.setAttribute(Attribute.three, "triplehijueputa");
+		options.setAttribute(Attribute.one, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/up1.png");
+		options.setAttribute(Attribute.two, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/mid1.png");
+		options.setAttribute(Attribute.three, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/down1.png");
 
 		const optionsone = this.ownerDocument.createElement("my-options") as Options;
-		optionsone.setAttribute(Attribute.one, "malparido");
-		optionsone.setAttribute(Attribute.two, "gonorrea");
-		optionsone.setAttribute(Attribute.three, "morrongo");
+		optionsone.setAttribute(Attribute.one, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/up2.png");
+		optionsone.setAttribute(Attribute.two, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/mid2.png");
+		optionsone.setAttribute(Attribute.three, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/down2.png");
 
 		const optionstwo = this.ownerDocument.createElement("my-options") as Options;
-		optionstwo.setAttribute(Attribute.one, "promiscuo");
-		optionstwo.setAttribute(Attribute.two, "pirobo");
-		optionstwo.setAttribute(Attribute.three, "carechimba");
+		optionstwo.setAttribute(Attribute.one, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/up3.png");
+		optionstwo.setAttribute(Attribute.two, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/mid3.png");
+		optionstwo.setAttribute(Attribute.three, "https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/down3.png");
 
-		const optionsdiv = this.ownerDocument.createElement("div");
+		const optionsdiv = this.ownerDocument.createElement("section");
+		optionsdiv.classList.add("options")
 		optionsdiv.appendChild(options);
 		optionsdiv.appendChild(optionstwo);
 		optionsdiv.appendChild(optionsone);
@@ -44,11 +45,7 @@ class Dashboard extends HTMLElement {
 		character.setAttribute(AttributeChar.up, appState.up);
 		character.setAttribute(AttributeChar.mid, appState.mid);
 		character.setAttribute(AttributeChar.down, appState.down);
-
-	
-		
-
-		this.shadowRoot?.appendChild(character);
+		optionsdiv.appendChild(character);
 
 	}
 }

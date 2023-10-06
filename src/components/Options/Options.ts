@@ -77,11 +77,21 @@ export default class Options extends HTMLElement {
 	render() {
 		if (this.shadowRoot)
 			this.shadowRoot.innerHTML = `<style>${style}</style>
-		    <div>
-			<p class="one">${this.one}</p>
-			<p class="two">${this.two}</p>
-			<p class="three">${this.three}</p>
+		    <section>
+			<div class="one">
+			<img src="https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/body.png">
+			<img class="part" src="${this.one}" >
 			</div>
+			<div class="two">
+			<img src="https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/body.png">
+			<img class="part" src="${this.two}" >
+			</div>
+			<div  class="three">
+			<img src="https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/body.png">
+			<img class="part" src="${this.three}">
+			</div>
+			
+			</section>
         `;
 
 		

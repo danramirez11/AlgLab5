@@ -34,7 +34,6 @@ export default class Character extends HTMLElement {
 
 	connectedCallback() {
 		this.render();
-		const btn = this.shadowRoot?.querySelector('button');
 	}
 
 	mount() {
@@ -45,9 +44,10 @@ export default class Character extends HTMLElement {
 		if (this.shadowRoot)
 			this.shadowRoot.innerHTML = `<style>${style}</style>
         <section>
-		<p>${this.up}</p>
-		<p>${this.mid}</p>
-		<p>${this.down}</p>
+		<img class="body" src="https://raw.githubusercontent.com/danramirez11/AlgLab5/main/dist/photos/body.png">
+		<img class="part" src="${this.up}">
+		<img class="part" src="${this.down}">
+		<img class="part" src="${this.mid}">
 		</section>
         `;
 	}

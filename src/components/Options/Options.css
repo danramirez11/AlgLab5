@@ -1,11 +1,18 @@
-div{
+section{
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-p{
-    background-color: gray;
-    padding: 12px;
-    margin: 12px;
+div{
+    position: relative;
+    height: 30vh;
+}
+
+.part{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

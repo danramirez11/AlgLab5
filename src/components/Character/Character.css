@@ -1,5 +1,18 @@
-p{
-    background-color: gray;
-    margin: 12px;
-    padding: 12px;
+section{
+    width: max-content;
+    height: max-content;
+    position: relative;
+}
+
+.body{
+    height: 90vh;
+}
+
+.part{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
 }
