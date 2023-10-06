@@ -2,9 +2,9 @@ import { AppState, Observer } from '../types/store';
 import { reducer } from './reducer';
 
 export let appState: AppState = {
-	up: 'mierda',
-	mid: 'gonorrea',
-	down: 'puto'
+	up: 'caca',
+	mid: 'pedo',
+	down: 'pis'
 };
 
 console.log(appState);

@@ -44,6 +44,8 @@ class Dashboard extends HTMLElement {
 		character.setAttribute(AttributeChar.up, appState.up);
 		character.setAttribute(AttributeChar.mid, appState.mid);
 		character.setAttribute(AttributeChar.down, appState.down);
+
+	
 		
 
 		this.shadowRoot?.appendChild(character);
